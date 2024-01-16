@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primery-color: #151515;
+  --contrast-color: #aaa;
+  --white-color: white;
+  --title: 50px;
+  --sub-title: 32px;
+  --txt: 24px;
+  --check-input-theme-height:30px;
+  --check-input-circle-offset: 3px;
+  --check-input-theme-width:60px;
+}
+body {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.page-wrap {
+  background-color: var(--primery-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  gap: 60px;
+}
+.title {
+  color: var(--contrast-color);
+  font-size: var(--title);
+}
+.subtitle {
+  color: var(--contrast-color);
+  font-size: var(--sub-title);
+}
+.check-theme-label {
+  color: var(--contrast-color);
+  font-size: var(--txt);
+}
+.radio-label {
+  color: var(--contrast-color);
+}
+.check-theme-input {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  width:var(--check-input-theme-width);
+  height: var(--check-input-theme-height);
+  cursor: pointer;
+}
+.change-theme-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.check-theme-input::before,
+.check-theme-input::after {
+  content: '';
+  display: block;
+  visibility: visible;
+  
+}
+.check-theme-input::before{
+    width: var(--check-input-theme-width);
+    height: var(--check-input-theme-height);
+    background-color: var(--primery-color);
+    box-shadow: inset 0px 0px 3px 2px  black ;
+    border-radius: 50px;
+   
+}
+.check-theme-input::after{
+    --circle-diameter :25px;
+   height: var(--circle-diameter);
+   width: var(--circle-diameter);
+   background-color: var(--contrast-color);
+   border-radius: 50%;
+   position: absolute;
+   top: calc((var(--check-input-theme-height) - var(--circle-diameter)) / 2);
+   left:var(--check-input-circle-offset);
+   transition: left 0.3s ease;
+}
+.check-theme-input:checked::after{
+    left: calc(100% - var(--circle-diameter) - var(--check-input-circle-offset));
+    background-color: rgb(0, 0, 0);
+}
