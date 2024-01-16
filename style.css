@@ -9,9 +9,9 @@
   --title: 50px;
   --sub-title: 32px;
   --txt: 24px;
-  --check-input-theme-height:30px;
+  --check-input-theme-height: 30px;
   --check-input-circle-offset: 3px;
-  --check-input-theme-width:60px;
+  --check-input-theme-width: 60px;
 }
 body {
   font-family: "VT323", monospace;
@@ -47,7 +47,7 @@ body {
   display: block;
   visibility: hidden;
   position: relative;
-  width:var(--check-input-theme-width);
+  width: var(--check-input-theme-width);
   height: var(--check-input-theme-height);
   cursor: pointer;
 }
@@ -60,31 +60,58 @@ body {
 }
 .check-theme-input::before,
 .check-theme-input::after {
-  content: '';
+  content: "";
   display: block;
   visibility: visible;
-  
 }
-.check-theme-input::before{
-    width: var(--check-input-theme-width);
-    height: var(--check-input-theme-height);
-    background-color: var(--primery-color);
-    box-shadow: inset 0px 0px 3px 2px  black ;
-    border-radius: 50px;
-   
+.check-theme-input::before {
+  width: var(--check-input-theme-width);
+  height: var(--check-input-theme-height);
+  background-color: var(--primery-color);
+  box-shadow: inset 0px 0px 3px 2px black;
+  border-radius: 50px;
 }
-.check-theme-input::after{
-    --circle-diameter :25px;
-   height: var(--circle-diameter);
-   width: var(--circle-diameter);
-   background-color: var(--contrast-color);
-   border-radius: 50%;
-   position: absolute;
-   top: calc((var(--check-input-theme-height) - var(--circle-diameter)) / 2);
-   left:var(--check-input-circle-offset);
-   transition: left 0.3s ease;
+.check-theme-input::after {
+  --circle-diameter: 25px;
+  height: var(--circle-diameter);
+  width: var(--circle-diameter);
+  background-color: var(--contrast-color);
+  border-radius: 50%;
+  position: absolute;
+  top: calc((var(--check-input-theme-height) - var(--circle-diameter)) / 2);
+  left: var(--check-input-circle-offset);
+  transition: left 0.3s ease;
 }
-.check-theme-input:checked::after{
-    left: calc(100% - var(--circle-diameter) - var(--check-input-circle-offset));
-    background-color: rgb(0, 0, 0);
+.check-theme-input:checked::after {
+  left: calc(100% - var(--circle-diameter) - var(--check-input-circle-offset));
+  background-color: rgb(0, 0, 0);
+}
+.smiles-wrap {
+  display: flex;
+  gap: 25px;
+  max-width: 372px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.smile-card {
+  background-color: white;
+  padding: 30px;
+  font-size: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px 10px;
+}
+td{
+  background-color: aliceblue;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(15, 14, 14);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid gold;
+  box-shadow: 0px 0px 15px 5px grey;
+}
+table{
+  background-color: gold;
+  border-radius: 10px;
 }

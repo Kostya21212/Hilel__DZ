@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', documentOnReady)
 
 
 function documentOnReady(){
+const arraySmiles = ['🛤️','🧖','🧗‍♀️','🛤️','🧖','🧗‍♀️', '😀','🦁','🧩'];
 const checkThemeEl = document.getElementById('checkTheme')
-console.log(checkThemeEl)
+
 const black = '#151515';
 const white = '#aaa';
-
+const smilesWrapEl = document.getElementById('smile-wrap-element')
 checkThemeEl.addEventListener('change', function (){
     const styleObj = document.documentElement.style
     if(checkThemeEl.checked){
@@ -26,6 +27,14 @@ checkThemeEl.addEventListener('change', function (){
     }
     
 });
+
+
+arraySmiles.forEach(i => {
+  const newEl = document.createElement('div')
+  newEl.textContent = i;
+  newEl.classList.add('smile-card');
+  smilesWrapEl.appendChild(newEl)
+})
 }
 const object = {
   name: 'Ivan',
@@ -36,7 +45,7 @@ const first = object.first
 object.first = 123
 console.log(object.first)
 
-const array = ['🧍‍♂️','🛤️','🧖','🧗‍♀️','🔑','⭐','🥵'];
+const array = ['🛤️','🧖','🧗‍♀️','🛤️','🧖','🧗‍♀️'];
 
 for(let i = 0; i < array.length; i++){
   const value = array[i]
