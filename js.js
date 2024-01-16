@@ -50,3 +50,4 @@ for(let i = 0; i < array.length; i++){
 array.forEach( function(i, index ) {
   console.log('Element from forEach:', i, index)
 })
+const a =12
