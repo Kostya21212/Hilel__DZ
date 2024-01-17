@@ -5,6 +5,7 @@
 //   }
 //   drawCats(10);
 // };
+const ad = 1
 document.addEventListener("DOMContentLoaded", documentOnReady);
 
 function documentOnReady() {
