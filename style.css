@@ -164,3 +164,30 @@ table {
   padding: 10px;
   border-radius: 1px;
 }/*# sourceMappingURL=style.css.map */
+.form{
+  background-color: rgb(227, 95, 30);
+  color: #151515;
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid blue;
+  font-size: 20px;
+  font-weight: 400;
+}
+.h1{
+  margin-left: 150px ;
+}
+.submit{
+  max-width: 158px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  /* text-align: center; */
+  border: 2px solid gold;
+  cursor: pointer;
+}
