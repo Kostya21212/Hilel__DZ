@@ -103,7 +103,7 @@ body {
 }
 td{
   background-color: aliceblue;
-  font-size: 25px;
+  font-size: 15px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(15, 14, 14);
   padding: 20px;
@@ -115,3 +115,20 @@ table{
   background-color: gold;
   border-radius: 10px;
 }
+.CellTable{
+  color: azure;
+  text-align: center;
+}
+.rowTable{
+  color: azure;
+ 
+}
+.Alternative{
+  background-color: gold;
+  background: gold;
+  color: #151515;
+}
+.hover{
+  background-color: gold;
+  color: #151515;
+}                                                            
