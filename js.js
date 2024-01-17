@@ -59,7 +59,7 @@
 // array.forEach( function(i, index ) {
 //   console.log('Element from forEach:', i, index)
 // })
-// const a =12
+const a =12
 
 
 
