@@ -124,11 +124,13 @@ function onReady() {
   const petNameInput = document.getElementById("petName");
   const outDataTextEl = document.getElementById('outDataText')
   const textOutputEl = document.createElement('p')
-  const numInput = prompt('Введіть 5-значне число')
+  const codeEl = document.getElementById('code')
+  console.log(codeEl.value)
+  const numInput = prompt('Введіть 5-значне число') 
   formNameDataEl.addEventListener('submit', function (e){
     e.preventDefault()
+    codeEl
     const inputNames = [firstNameInput.value, CountryInput.value, petNameInput.value]
-    
     const splitedNum = numInput.toString().split('').join(' ')
     textOutputEl.innerHTML = splitedNum
     outDataTextEl.appendChild(textOutputEl)
