@@ -1,17 +1,20 @@
-const numOrStr = prompt('input number or string')
-switch (true) {
-  case numOrStr === null :
-    console.log('ви скасували');
-  break;
-  case numOrStr.trim() === '':
-    console.log('Empty String');
-    break;
-  case isNaN(Number(numOrStr)):
-    console.log('number is Ba_NaN');
-  break;
-  default:
-    console.log('OK!')
-}
-    
-
+function addNum() {
+  const firstNum = prompt("Введіть перше число");
  
+ const secondNum = prompt("Введіть друге число");
+
+ const thirdNum = prompt("Введіть третье число");
+
+  if (firstNum === null || secondNum === null || thirdNum === null) {
+    alert("Ви вийшли");
+  } else if (isNaN(firstNum) || isNaN(secondNum) || isNaN(thirdNum)) {
+    alert("Введіть будь ласка число");
+  } else if (firstNum === "" || secondNum === "" || thirdNum === "") {
+    alert("Нічого не написано!");
+  } else {
+    const result = (Number(firstNum) + Number(secondNum) + Number(thirdNum)) / 3;
+    alert(`Середне значення 3-х чисел : ${result}`);
+  }
+}
+addNum();
+
