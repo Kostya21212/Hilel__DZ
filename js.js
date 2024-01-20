@@ -116,7 +116,7 @@
 //     return document.getElementsByTagName(id);
 //   }
 // }
-const ad =12
+
 document.addEventListener("DOMContentLoaded", onReady);
 function onReady() {
   const formNameDataEl =  document.getElementById('formInputData');
@@ -158,4 +158,15 @@ function onReady() {
     //   outDataTextEl.appendChild(textOutputEl)
     // })
   console.log(formNameDataEl);
+}
+const a = 5
+const b = '5'
+if(a != b){
+  console.log('1')
+}else{
+  console.log('2')
+}
+const array = ['first','second','third']
+for(let i = array.length -1; i>=0;i--){
+  console.log(array[i])
 }
