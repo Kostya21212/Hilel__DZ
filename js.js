@@ -81,3 +81,44 @@ function calculate() {
     b = ''; // очистимо значення b для нового введення
     sign = ''; // очистимо знак операції
 }
+
+
+
+
+
+//Другий варіант калькулятору
+function calc (){
+let results
+const firstNum = prompt('Вкажіть перше число')
+const secondNum = prompt('Вкажіть друге число')
+const actions = prompt('Вкажіть арифметичну дію (+,-,/,*) ')
+
+if(firstNum === null || secondNum === null || actions === null){
+    alert('Ви вийшли з калькулятору')
+}
+else if(firstNum.trim() === '' || secondNum.trim() === '' || actions.trim() === ''){
+    alert('Ви нічого не ввели')
+}
+else {
+    
+    switch(actions){
+        case '+':
+        results = Number(firstNum) + Number(secondNum);
+        break
+        case '-':
+        results = Number(firstNum) - Number(secondNum);
+        break
+        case '*':
+        results = Number(firstNum) * Number(secondNum);
+        break
+        case '/':
+        results = Number(firstNum) / Number(secondNum);
+        break
+        default:  alert('Ви ввели невірну дію')
+        return
+    }
+    alert(`${firstNum} ${actions} ${secondNum} = ${results}`)
+} 
+}
+calc()
+
