@@ -1,193 +1,146 @@
-* {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
 }
 
-:root {
-  --primery-color: #151515;
-  --contrast-color: #aaa;
-  --white-color: white;
-  --title: 50px;
-  --sub-title: 32px;
-  --txt: 24px;
-  --check-input-theme-height: 30px;
-  --check-input-circle-offset: 3px;
-  --check-input-theme-width: 60px;
+.calculator-container{
+ background-color: rgb(0, 0, 0);
+ border: 2px solid black;
+ padding-left: 21px;
+ padding-right: 21px;
+ font-family: "Inter", sans-serif;
+ max-width: 390px;
+ min-height: 844px;
+ border-radius: 40px;
+ display: flex;
+ flex-direction: column;
 }
-
-body {
-  font-family: "VT323", monospace;
+#input-calc-res{
+  background-color: black;
+  border: none;
+  color: white;
+  min-width: 44px;
+  min-height: 41px;
   font-weight: 400;
+  font-family: "Inter", sans-serif;
   font-style: normal;
+  line-height: 16px;
+  font-size: 48px;
+  text-align: right;
+  border-right: 2px solid grey;
+  padding-right: 5px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
-
-.page-wrap {
-  background-color: var(--primery-color);
-  min-height: 100vh;
+#input-calc-res2{
+  background-color: black;
+  border: none;
+  color: rgb(104, 104, 104);
+  min-width: 44px;
+  min-height: 41px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 16px;
+  font-size: 48px;
+  text-align: right;
+ padding-right: 5px;
+ margin-bottom: 20px;
+  
+}
+.icon-up{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  color: var(--white-color);
-  gap: 60px;
+  justify-content: space-between;
+  min-width: 375px;
+  min-height: 44px;
+  gap: 219px;
+  padding: 12px 14px 11px 21px;
 }
-
-.title {
-  color: var(--contrast-color);
-  font-size: var(--title);
-}
-
-.subtitle {
-  color: var(--contrast-color);
-  font-size: var(--sub-title);
-}
-
-.check-theme-label {
-  color: var(--contrast-color);
-  font-size: var(--txt);
-}
-
-.radio-label {
-  color: var(--contrast-color);
-}
-
-.check-theme-input {
-  display: block;
-  visibility: hidden;
-  position: relative;
-  width: var(--check-input-theme-width);
-  height: var(--check-input-theme-height);
-  cursor: pointer;
-}
-
-.change-theme-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.time-text{
+  color: white;
+  padding: 3px 0px 2px 0px;
   align-items: center;
   justify-content: center;
 }
-
-.check-theme-input::before,
-.check-theme-input::after {
-  content: "";
-  display: block;
-  visibility: visible;
+.story-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+  padding-bottom: 20px;
 }
-
-.check-theme-input::before {
-  width: var(--check-input-theme-width);
-  height: var(--check-input-theme-height);
-  background-color: var(--primery-color);
-  box-shadow: inset 0px 0px 3px 2px black;
-  border-radius: 50px;
-}
-
-.check-theme-input::after {
-  --circle-diameter: 25px;
-  height: var(--circle-diameter);
-  width: var(--circle-diameter);
-  background-color: var(--contrast-color);
-  border-radius: 50%;
-  position: absolute;
-  top: calc((var(--check-input-theme-height) - var(--circle-diameter)) / 2);
-  left: var(--check-input-circle-offset);
-  transition: left 0.3s ease;
-}
-
-.check-theme-input:checked::after {
-  left: calc(100% - var(--circle-diameter) - var(--check-input-circle-offset));
-  background-color: rgb(0, 0, 0);
-}
-
-.smiles-wrap {
+.icons-menu{
   display: flex;
   gap: 25px;
-  max-width: 372px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction:row ;
 }
-
-.smile-card {
-  background-color: white;
-  padding: 30px;
-  font-size: 35px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 25px 10px;
+.red-btn{
+  border-radius: 9px;
+background: #FF5959;
+width: 73px;
+height: 75px;
+flex-shrink: 0;
+color: #343434;
+font-family: "Inter", sans-serif;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
-
-td {
-  background-color: aliceblue;
-  font-size: 15px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(15, 14, 14);
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid gold;
-  box-shadow: 0px 0px 15px 5px grey;
+.btn{
+  border-radius: 9px;
+background: #343434;
+width: 73px;
+height: 75px;
+flex-shrink: 0;
 }
-
-table {
-  background-color: gold;
-  border-radius: 10px;
-}
-
-.CellTable {
-  color: azure;
-  text-align: center;
-}
-
-.rowTable {
-  color: azure;
-}
-
-.Alternative {
-  background-color: gold;
-  background: gold;
-  color: #151515;
-}
-
-.hover {
-  background-color: gold;
-  color: #151515;
-}
-
-.table1 {
-  border: 1px solid var(--contrast-color);
-  color: var(--contrast-color);
+.btn{
+  width: 73px;
+  height: 75px;
+  padding: 17px 27px 17px 27px;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
   font-size: 36px;
-  border-radius: 1px;
-}
-.table1 td {
-  border: 1px solid var(--contrast-color);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 10px;
-  border-radius: 1px;
-}/*# sourceMappingURL=style.css.map */
-.form{
-  background-color: rgb(227, 95, 30);
-  color: #151515;
+  font-style: normal;
+  /* font-weight: 400; */
+  line-height: normal;
   display: flex;
-  gap: 20px;
-  padding: 40px;
-  flex-direction: column;
+  text-align: center;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  border: 2px solid blue;
-  font-size: 20px;
-  font-weight: 400;
+
+
 }
-.h1{
-  margin-left: 150px ;
+.wrap {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
-.submit{
-  max-width: 158px;
-  padding: 10px;
-  background-color: black;
-  border-radius: 10px;
-  color: white;
-  font-size: 15px;
-  /* text-align: center; */
-  border: 2px solid gold;
-  cursor: pointer;
+.footer{
+  display: flex;
+  width: 375px;
+  height: 33px;
+  padding-top:5px;
+  justify-content: center;
+  align-items: center;
+}
+.result{
+  background-color: chartreuse;
+  color: black;
+}
+.green-color-button{
+  color: chartreuse;
 }
